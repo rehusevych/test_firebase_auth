@@ -131,9 +131,6 @@ class _MyHomePageState extends State<MyHomePage> {
         );
         await FirebaseAuth.instance.signInWithCredential(provider);
       } catch (e) {
-        print("Hello");
-        print(e);
-        //TODO remove comment
         throw Exception(e);
       }
     }
