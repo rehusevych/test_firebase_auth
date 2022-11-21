@@ -3,11 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/services.dart';
 import 'firebase_options.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:openid_client/openid_client_io.dart';
 import 'package:pedantic/pedantic.dart';
+import 'package:firebase_auth_oauth/firebase_auth_oauth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -125,11 +127,13 @@ class _MyHomePageState extends State<MyHomePage> {
     final info = await auth.getUserInfo();
     if (token.accessToken != null) {
       try {
-        final provider =
-            OAuthProvider('oidc.theinfluencers-keycloak').credential(
-          idToken: token.idToken.toCompactSerialization(),
-        );
-        await FirebaseAuth.instance.signInWithCredential(provider);
+        // final provider =
+        //     OAuthProvider('oidc.theinfluencers-keycloak').credential(
+        //   idToken: token.idToken.toCompactSerialization(),
+        // );
+        await FirebaseAuthOAuth().openSignInFlow(
+            'https://authentication-dev.theinfluencers.com/auth/realms/influencers-com',
+            scopes);
       } catch (e) {
         throw Exception(e);
       }

@@ -7,6 +7,42 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:738671848360:android:80c8c12f6beeb75b1dcb9d",
+        "android_client_info": {
+          "package_name": "com.beleven.theinfluencers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738671848360-larv0scsm9u7f73727un36tgj0k7eu5d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAF-fhP-tEb38Q2CsVdUc7J0uOxxMo6EN4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738671848360-larv0scsm9u7f73727un36tgj0k7eu5d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "738671848360-6cdr5kpdsd765h5nsaba129ies9qv7hh.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "test.influencers.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:738671848360:android:a7eb167a2bb3a7dc1dcb9d",
         "android_client_info": {
           "package_name": "com.beleven.theinfluencers.dev"
